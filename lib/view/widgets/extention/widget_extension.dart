@@ -18,15 +18,7 @@ extension WidgetExtension on Widget {
   //ALIGN
   Widget align(Alignment alignment) => Align(alignment: alignment, child: this);
 
-  //BASELINE
-
-  Widget baseline(double width) => Baseline(
-        baseline: width,
-        baselineType: TextBaseline.alphabetic,
-        child: this,
-      );
-
-  //BASELINE
+  //Rotate
 
   Widget rotate(int degree) => RotatedBox(
         quarterTurns: degree,

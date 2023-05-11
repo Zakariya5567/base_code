@@ -7,7 +7,14 @@ import 'helper/scroll_behaviour.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  //await Firebase.initializeApp();
+  //   // Initialize firebase
+  //   await Firebase.initializeApp();
+  //
+  //   //NOTIFICATION
+  //   //Request for permission
+  //   FirebaseMessaging.instance.requestPermission();
+  //   //Initialize notification service class
+  //   await NotificationService().initialize();
   runApp(const MyApp());
 }
 

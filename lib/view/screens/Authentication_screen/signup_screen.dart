@@ -14,7 +14,6 @@ import '../../../utils/string.dart';
 import '../../../utils/style.dart';
 import '../../widgets/custom_text_field.dart';
 import '../../widgets/custom_button.dart';
-import '../../widgets/extention/border_extension.dart';
 import 'components/google_signin_section.dart';
 import 'components/logo_section.dart';
 
@@ -36,6 +35,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final authProvider = Provider.of<AuthProvider>(context, listen: false);
+    authProvider.setContext(context: context);
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: blueStatusBar(),
       child: SafeArea(
@@ -103,7 +104,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             CustomButton(
                               buttonName: btnSignUp,
                               onPressed: () async {
-                                controller.phoneValidator();
                                 if (formKey.currentState!.validate()) {
                                   FocusManager.instance.primaryFocus?.unfocus();
                                 }

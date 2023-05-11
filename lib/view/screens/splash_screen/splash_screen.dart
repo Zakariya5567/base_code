@@ -18,7 +18,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    handleNotification();
     routes();
+  }
+
+  // Calling notification for listen the app is in which state (foreground,background,terminated)
+  handleNotification() async {
+    //await NotificationService().handleNotification(context);
   }
 
   void routes() async {
